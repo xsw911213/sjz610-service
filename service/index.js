@@ -8,6 +8,8 @@ let pageConfig = require('./api/pageConfig');
 
 let modules = require('./api/modules');
 
+let livingMsg = require('./api/livingMsg');
+
 
 
 // let hotelSetting = require('./api/hotelSetting');
@@ -32,6 +34,10 @@ let services = [
   {
     path: '/modules',
     fun: modules
+  },
+  {
+    path: '/livingmsg',
+    fun: livingMsg
   },
   {
     path: '/pageconfig',
