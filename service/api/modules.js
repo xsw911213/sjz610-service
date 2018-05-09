@@ -26,7 +26,7 @@ function getModules(userinfoRromClient,res){
     console.log(error)
   }
 
-  db.find(dbPth, schemaOptions.baseInfo, collection, condidtion, fields, null, error, succ);
+  db.find(dbPth, schemaOptions.modules, collection, condidtion, fields, null, error, succ);
 }
 
 function putModules(userinfoRromClient,res){

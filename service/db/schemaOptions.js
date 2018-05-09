@@ -14,6 +14,13 @@ let modules = {
   modules: {type: Array, default: []},
 }
 
+let livingMsg = {
+  meeting:{type: String},
+  time:{type: Date},
+  img:{type: String},
+  text:{type: String},
+}
+
 // baseInfo集合  数据模型
 // let baseInfo = {
 //   userid: {type: String},
@@ -49,6 +56,7 @@ let schemaOption = {
   user,
   modules,
   order,
+  livingMsg
   // commodity
 }
 
