@@ -2,36 +2,6 @@ let db = require('../db');
 let dbPth = require('../../config').dbPth;
 let schemaOptions = require("../db/schemaOptions");
 
-function getLivingMsg(userinfoRromClient,res){
-  let collection = 'livingmsgs';
-
-  let condidtion = userinfoRromClient;
-
-  let fields ={
-    _id: true,
-    meeting: true,
-    time: true,
-    text: true,
-    img: true
-  }
-
-  function succ(result){
-    console.log(result);
-    let resObj = {
-      status: 'success',
-      data: result
-    }
-
-    res.json(resObj)
-  }
-
-  function error(error){
-    console.log(error)
-  }
-
-  db.find(dbPth, schemaOptions.livingMsg, collection, condidtion, fields, null, error, succ);
-}
-
 function insertLivingMsg(userinfoRromClient,res){
 
   let collection = 'livingmsgs';
@@ -110,6 +80,36 @@ function updateLivingMsg(userinfoRromClient,res){
   }
 
   db.update(dbPth, schemaOptions.livingMsg, collection, oldVal, newVal, error, succ);
+}
+
+function getLivingMsg(userinfoRromClient,res){
+  let collection = 'livingmsgs';
+
+  let condidtion = userinfoRromClient;
+
+  let fields ={
+    _id: true,
+    meeting: true,
+    time: true,
+    text: true,
+    img: true
+  }
+
+  function succ(result){
+    console.log(result);
+    let resObj = {
+      status: 'success',
+      data: result
+    }
+
+    res.json(resObj)
+  }
+
+  function error(error){
+    console.log(error)
+  }
+
+  db.find(dbPth, schemaOptions.livingMsg, collection, condidtion, fields, null, error, succ);
 }
 
 

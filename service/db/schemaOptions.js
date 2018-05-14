@@ -21,6 +21,14 @@ let livingMsg = {
   text:{type: String},
 }
 
+let personData = {
+  name:{type: String,default:''},
+  tel:{type: String,default:''},
+  part:{type: String,default:''},
+  remark:{type: String,default:''},
+  signined:{type:Boolean, default:false},
+}
+
 // baseInfo集合  数据模型
 // let baseInfo = {
 //   userid: {type: String},
@@ -56,7 +64,8 @@ let schemaOption = {
   user,
   modules,
   order,
-  livingMsg
+  livingMsg,
+  personData
   // commodity
 }
 

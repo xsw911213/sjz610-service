@@ -25,7 +25,7 @@ let initUsers = function () {
   ]
   db.insert(dbPth, schemaOptions.user, collection, users);
 }
-initUsers();
+//initUsers();
 
 let initModules = function () {
 
@@ -51,5 +51,15 @@ let initModules = function () {
   db.insert(dbPth, schemaOptions.modules, collection, m);
 
 }
+//initModules();
 
-initModules();
+
+
+let initPersonData = function(){
+  let collection = 'persondatas'
+
+  let personData = require('./personData');
+
+  db.insert(dbPth, schemaOptions.personData, collection, personData);
+}
+initPersonData();
