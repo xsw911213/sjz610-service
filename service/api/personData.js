@@ -13,7 +13,8 @@ function getPersonData(userinfoRromClient,res) {
     name: true,
     tel: true,
     part: true,
-    remark: true
+    remark: true,
+    signined: true
   }
 
   function succ(result){
@@ -35,7 +36,13 @@ function getPersonData(userinfoRromClient,res) {
 
 function updataPersonData(userinfoRromClient,res){
   let collection = 'persondatas'
-  let oldVal = {_id:userinfoRromClient._id};
+  let oldVal = {};
+
+  if(userinfoRromClient.signined){
+    oldVal = {tel:userinfoRromClient.tel}
+  }else{
+    oldVal = {_id:userinfoRromClient._id};
+  }
 
   let newVal = userinfoRromClient;
 
@@ -48,10 +55,28 @@ function updataPersonData(userinfoRromClient,res){
   function succ(result) {
     console.log(result)
 
-    resData = {
-      status: "success",
-      text: '修改成功'
+    if(userinfoRromClient.signined){
+      if(result.n == 1){
+        resData = {
+          status: "success",
+          code:1,
+          text: '签到成功'
+        }
+      }else{
+        resData = {
+          status: "success",
+          code:0,
+          text: '签到失败'
+        }
+      }
+    }else{
+      resData = {
+        status: "success",
+        text: '修改成功'
+      }
     }
+
+    
 
     res.json(resData)
   }
