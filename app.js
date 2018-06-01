@@ -39,7 +39,7 @@ app.use(cors());
 //   console.log(req.url);
 // });
 app.use('/', express.static(fePath));
-let pathes = ['map','signin','date','pdate','dh','individualcenter','msg','living','livingdetail']
+let pathes = ['map','signin','date','pdate','dh','individualcenter','msg','living','livingdetail','trademeet']
 for(let j = 0; j < pathes.length;j++){
   app.use('/'+pathes[j], express.static(fePath));
 }
