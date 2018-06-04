@@ -29,6 +29,11 @@ let personData = {
   signined:{type:Boolean, default:false},
 }
 
+let msg = {
+  title:{type: String},
+  msg:{type: String},
+}
+
 // baseInfo集合  数据模型
 // let baseInfo = {
 //   userid: {type: String},
@@ -65,7 +70,8 @@ let schemaOption = {
   modules,
   order,
   livingMsg,
-  personData
+  personData,
+  msg
   // commodity
 }
 

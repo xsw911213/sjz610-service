@@ -12,6 +12,8 @@ let livingMsg = require('./api/livingMsg');
 
 let personData = require('./api/personData');
 
+let msg = require('./api/msg');
+
 
 
 // let hotelSetting = require('./api/hotelSetting');
@@ -48,6 +50,10 @@ let services = [
   {
     path: '/persondata',
     fun: personData
+  },
+  {
+    path: '/msg',
+    fun: msg
   }
 
 
