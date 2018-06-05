@@ -26,6 +26,7 @@ let personData = {
   tel:{type: String,default:''},
   part:{type: String,default:''},
   remark:{type: String,default:''},
+  index:{type:Number, default:0},
   signined:{type:Boolean, default:false},
 }
 

@@ -1,2 +1,0 @@
-webpackJsonp([12],{"299d":function(e,n){},o7em:function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var r={name:"CardCase",data:function(){return{}},mounted:function(){console.log(111)}},a={render:function(){var e=this.$createElement;return(this._self._c||e)("div",{attrs:{id:"card-case"}},[this._v("\n  此模块正在建设当中\n")])},staticRenderFns:[]};var c=t("VU/8")(r,a,!1,function(e){t("299d")},null,null);n.default=c.exports}});
-//# sourceMappingURL=12.9244654fd4baf42d1260.js.map

@@ -14,6 +14,7 @@ function getPersonData(userinfoRromClient,res) {
     tel: true,
     part: true,
     remark: true,
+    index: true,
     signined: true
   }
 
