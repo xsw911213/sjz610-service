@@ -13,11 +13,11 @@ let qiniu = require('qiniu')
 let sha1 = require('sha1')
 
 // 七牛提供的公钥
-let accessKey = 'lsFuL7yk7x6A_tWcEiiXeQOF9RZHmE51oIq8McHb'
+let accessKey = 'WfnvMISqP2jslX8PwHyOqiOBY15Gjrnd3Q1-IYn3'
 // 七牛提供的私钥
-let secretKey = 'V6UniMkmejvE16JM2a60C1XaBZo-lmeL1VIeSgY2'
+let secretKey = 'qfnF3RxWqK2rAc7TVyPOZL-rIp_xwn5kqkkHKuWF'
 // 存储空间名
-let bucketName = 'uploadimg'
+let bucketName = 'exhibition'
 
 let uploadimgFun = function (req, res){
   console.log(req.query)

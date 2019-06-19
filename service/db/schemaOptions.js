@@ -14,25 +14,24 @@ let modules = {
   modules: {type: Array, default: []},
 }
 
-let livingMsg = {
-  meeting:{type: String},
-  time:{type: Date},
-  img:{type: String},
-  text:{type: String},
-}
-
-let personData = {
-  name:{type: String,default:''},
-  tel:{type: String,default:''},
-  part:{type: String,default:''},
-  remark:{type: String,default:''},
-  index:{type:Number, default:0},
-  signined:{type:Boolean, default:false},
-}
-
-let msg = {
+let meetingNotice = {
   title:{type: String},
-  msg:{type: String},
+  richText:{type: String}
+}
+
+let news = {
+  title:{type: String},
+  richText:{type: String},
+  text:{type: String},
+  headImg:{type: String}
+}
+
+let meetingIntroduce = {
+  imgurl:{type: String},
+}
+
+let viewService = {
+  imgurl:{type: String},
 }
 
 // baseInfo集合  数据模型
@@ -51,15 +50,6 @@ let msg = {
 //   commodityList: {type: Array, default: []},
 // }
 
-// order集合  数据模型
-let order = {
-  userid: {type: String},
-  deal: {type:Boolean, default:false},
-  room: {type: String},
-  orderNum: {type: String},
-  orderContent: {type: Object, default: {}},
-}
-
 //commodity集合  数据模型
 // let commodity = {
 //   userid: {type: String},
@@ -69,10 +59,10 @@ let order = {
 let schemaOption = {
   user,
   modules,
-  order,
-  livingMsg,
-  personData,
-  msg
+  meetingNotice,
+  news,
+  meetingIntroduce,
+  viewService
   // commodity
 }
 

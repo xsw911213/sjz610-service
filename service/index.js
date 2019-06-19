@@ -2,25 +2,19 @@
 
 let loginService = require('./api/login');
 
-
-// 用户基本信息设置（查询基本信息、修改基本信息）
 let pageConfig = require('./api/pageConfig');
 
 let modules = require('./api/modules');
 
-let livingMsg = require('./api/livingMsg');
+let meetingNotice = require('./api/meetingNotice');
 
-let personData = require('./api/personData');
+let news = require('./api/news');
+
+let meetingIntroduce = require('./api/meetingIntroduce');
+
+let viewService = require('./api/viewService');
 
 let msg = require('./api/msg');
-
-
-
-// let hotelSetting = require('./api/hotelSetting');
-// let beginAdSetting = require('./api/beginAdSetting');
-// let topAdSetting = require('./api/topAdSetting');
-// let getAd = require('./api/getAdRequestFromClient')
-
 
 // 上传图片服务
 let uploadimg = require('./api/uploadimg');
@@ -40,16 +34,24 @@ let services = [
     fun: modules
   },
   {
-    path: '/livingmsg',
-    fun: livingMsg
+    path: '/meetingnotice',
+    fun: meetingNotice
+  },
+  {
+    path: '/news',
+    fun: news
   },
   {
     path: '/pageconfig',
     fun: pageConfig
   },
   {
-    path: '/persondata',
-    fun: personData
+    path: '/meetingintroduce',
+    fun: meetingIntroduce
+  },
+  {
+    path: '/su',
+    fun: viewService
   },
   {
     path: '/msg',

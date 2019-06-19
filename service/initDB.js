@@ -20,27 +20,26 @@ let initUsers = function () {
     {
       "userid": 1,
       "username": "admin",
-      "password": "xu123456",
+      "password": "123456",
     }
   ]
   db.insert(dbPth, schemaOptions.user, collection, users);
 }
-//initUsers();
 
 let initModules = function () {
 
   let collection = 'modules'
 
   let modules = [
-    { name:'签到',show:true},
-    { name:'会议日程',show:true},
-    { name:'图文直播',show:true},
-    { name:'旅游交易会',show:true},
-    { name:'智慧地图',show:true},
-    { name:'景区导览',show:true},
-    { name:'留言板',show:true},
-    { name:'名片夹',show:true},
-    { name:'个人中心',show:true},
+    { name:'会议介绍',show:true},
+    { name:'观摩服务',show:true},
+    { name:'活动日程',show:true},
+    { name:'新闻报道',show:true},
+    { name:'直播间',show:true},
+    { name:'互动留言',show:true},
+    { name:'一键导航',show:true},
+    { name:'往届旅发',show:true},
+    { name:'吃住行游乐购',show:true},
   ]
 
   let m = {
@@ -51,15 +50,17 @@ let initModules = function () {
   db.insert(dbPth, schemaOptions.modules, collection, m);
 
 }
-//initModules();
+
+initUsers();
+// initModules();
 
 
 
-let initPersonData = function(){
-  let collection = 'persondatas'
+// let initPersonData = function(){
+//   let collection = 'persondatas'
 
-  let personData = require('./personData');
+//   let personData = require('./personData');
 
-  db.insert(dbPth, schemaOptions.personData, collection, personData);
-}
-initPersonData();
+//   db.insert(dbPth, schemaOptions.personData, collection, personData);
+// }
+// initPersonData();

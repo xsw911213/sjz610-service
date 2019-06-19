@@ -47,8 +47,11 @@ app.use('/admin', express.static(adminPath));
 app.use('/static', express.static(assetPath));
 
 // 解析请求body的参数
-app.use(bodyParser.json());  //这里指定参数使用 json 格式
+// 上传文件大小
+let limit = '50mb'
+app.use(bodyParser.json({limit}));  //这里指定参数使用 json 格式
 app.use(bodyParser.urlencoded({
+  limit,
   extended: true
 }));
 
